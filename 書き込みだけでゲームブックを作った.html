@@ -1,0 +1,102 @@
+<?php
+     date_default_timezone_set ('Asia/Tokyo');
+     //配列を使用し、要素順に(日:0〜土:6)を設定する
+     $week = [
+       '日', //0
+       '月', //1
+       '火', //2
+       '水', //3
+       '木', //4
+       '金', //5
+       '土', //6
+     ];
+      
+     $date = date('w');
+
+     $now = microtime(true);
+
+     # 小数点以下から、上2桁をミリ秒として取得する
+     $ms = (int)(($now - (int)$now) * 100);
+     $msStr = str_pad($ms, 2, 0, STR_PAD_LEFT);
+
+    //初期パラメータ
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $timestamp = time();
+    $secret = time()*mt_rand(0,99999); 
+
+    //sha1を使ってハッシュ化
+    $id_hash = hash_hmac("sha1", $timestamp.$ip, $secret);
+
+    //base64の形式に変換
+    $id_base64 = base64_encode($id_hash);
+
+    //先頭の8文字だけ抜き取る
+    $id =  substr($id_base64, 0, 8);
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+   
+   
+    <title>書き込みだけでゲームブックを作った</title>
+   
+   </head>
+   <!--nobanner-->
+   <body vlink="#AA0088" text="#000000" link="#0000FF" bgcolor="#EFEFEF" alink="#FF0000">
+   <div style="position: absolute; left: 0px; top: 0px; visibility: hidden;">
+     <img style="width: 0px; height: 0px;" alt="" src="https://ssp.send.microad.jp/ic?ep=5YxL2NySJo0Bfei5mbheubqNFJ0tuYCEYO1rWoDCeQTDrcy5klniZNiLs4jPzD3o-62SBl_D8AcCmSakjdeyyYqRdcW7uYIqXx8cx_Jd8qCMg4LcHkiBoWogwgZfw8gfLl3uZFxDftimhCnprtzOKlMfOAdanSKEnKOS-NpE7Qlu2tdAGfBnyP76tUWI" width="0" height="0">
+   </div><img src="https://adsd-sync.amanad.adtdp.com/microadsync" style="width:1px; height:1px; display:none;"></div><div id="AD_8a5847f954082cad50c3077f188d9ab9_1">	<script type="text/javascript">		microadCompass.queue.push({			"spot": "8a5847f954082cad50c3077f188d9ab9",			"url": "${COMPASS_EXT_URL}",			"referrer": "${COMPASS_EXT_REF}"		});	</script></div><!-- //---><script src="http://www.majo.co.jp/jwd.js"></script><script type="text/javascript" charset="UTF-8" src="//j.microad.net/js/compass.js" onload="new microadCompass.AdInitializer().initialize();" async=""></script><div id="AD_afbd33fe387660f9111e0c8688c68395_1">	<script type="text/javascript">		microadCompass.queue.push({			"spot": "afbd33fe387660f9111e0c8688c68395",			"url": "${COMPASS_EXT_URL}",			"referrer": "${COMPASS_EXT_REF}"		});	</script></div><br>
+   <iframe style="position:absolute; top:-9999px; left: -9999px; border-style: none" src="https://cache.send.microad.jp/js/cookie_loader.html" width="1" height="1"></iframe><script src="https://dmp.im-apps.net/sdk/im-uid.js"></script>
+   <hr>
+   
+   <div style="margin:0px;">
+   <div style="margin-top:1em;">
+    <span style="float:left;">
+    <a href="./">■TOPに戻る■</a> <a href="http://www.nennneko5787.ml/%E6%9B%B8%E3%81%8D%E8%BE%BC%E3%81%BF%E3%81%A0%E3%81%91%E3%81%A7%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%96%E3%83%83%E3%82%AF%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F.html">アドレスバークリア</a>
+    </span>
+    <span style="float:right;">
+    [PR]<a href="http://arkmonster.r.ribbon.to" target="_blank">14ちゃんねる</a>[PR]
+    </span>&nbsp;
+   </div>
+   </div>
+   
+   <div style="background-color:red;color:white;line-height:3em;margin:1px;padding:1px;">
+    これはHTMLです。残念ですが投稿はできません。
+    </div>
+   <hr style="background-color:#888;color:#888;border-width:0;height:1px;position:relative;top:-.4em;">
+   
+   <h1 style="color:#FF0000;font-size:larger;font-weight:normal;margin:-.5em 0 0;">書き込みだけでゲームブックを作った</h1>
+   
+   <dl class="thread">
+    <dt><a name="1"></a>1 ：<font color="green"><b>名無しさん@書ゲ作</b></font>：<?=date("Y/m/d")?>(<?=$week[$date]?>) <?=date("H:i:s")?>.<?=$msStr?> ID:<?=$id?></dt>
+     <dd>
+掲示板ゲームです！<br>
+<br>
+勇者は旅に出た…<br>
+次へ向かう場所はどこだろう…<br>
+<a href="#36">→３６へ </a><br><br></dd>
+   </dl>
+   <dt><a name="2"></a>2 ：<font color="green"><b>名無しさん@書ゲ作</b></font>：<?=date("Y/m/d")?>(<?=$week[$date]?>) <?=date("H:i:s")?>.<?=$msStr?> ID:<?=$id?></dt>
+     <dd>
+     「売れない豚はただのペットだ・・・」<br>
+変な男がいる<br>
+<a href="#12">→１２へ</a><br><br></dd>
+   </dl>
+   <dt><a name="3"></a>3 ：<font color="green"><b>名無しさん@書ゲ作</b></font>：<?=date("Y/m/d")?>(<?=$week[$date]?>) <?=date("H:i:s")?>.<?=$msStr?> ID:<?=$id?></dt>
+     <dd>
+     「日本人許さないアル！」<br>
+中国人に出会った！<br>
+<a href="#66">→６６へ</a><br><br></dd>
+   </dl>
+   <a href="javascript:alert('<?=filesize("書き込みだけでゲームブックを作った.html")/1024?>MB')" style="text-decoration: none;"><font face="Arial" color="red"><b><?=floor(filesize("書き込みだけでゲームブックを作った.html")/1024)?>KB</b></font></a>
+   
+   <hr>
+   <div style="margin-top:4em;">
+書き込みだけでゲームブックを作った.html - nennneko5787(Original By <a href="http://viper.2ch.sc/test/read.cgi/news4vip/1662168745/" style="text-decoration: none;" target="_blank"><font color="green"><b>エルテ・ティート</b></font></a>)<br>
+   <font color="blue"><b><s>◆KAD4lm33uM</s></b></font><b>←漏れました <font color="blue">◆NOrufLSRl.</font></b>
+   
+   
+   
+   </div><iframe src="https://gum.criteo.com/syncframe?origin=publishertag&amp;topUrl=arkmonster.r.ribbon.to#{&quot;uid&quot;:{&quot;origin&quot;:0},&quot;lwid&quot;:{&quot;origin&quot;:0},&quot;bundle&quot;:{&quot;value&quot;:&quot;XJbCZl9LR1NHTDhDNjYwQkozUTZXZVo5OFV6UVNxOFB5OEtkZEtHaDc2VzdnYjdRdUs5blN0VU9kNXhUZyUyQnBXMzJaWm9QVHNhOGVjR21LVkdKNGNYSXVnVjZKczAlMkJybkJoMmZyWmg1SVlrQ1o0U0JkTXhrWDdNQUNEc3l6dFNDNXlCTnlXZ1olMkZEajNoMk5yTGNxbFZOQW04WFElM0QlM0Q&quot;,&quot;origin&quot;:3},&quot;optout&quot;:{&quot;value&quot;:false,&quot;origin&quot;:0},&quot;sid&quot;:{&quot;origin&quot;:0},&quot;tld&quot;:&quot;ribbon.to&quot;,&quot;topUrl&quot;:&quot;arkmonster.r.ribbon.to&quot;,&quot;version&quot;:128,&quot;cw&quot;:true,&quot;lsw&quot;:true,&quot;origin&quot;:&quot;publishertag&quot;,&quot;requestId&quot;:&quot;0.09126440085461851&quot;}" style="border-width: 0px; margin: 0px; display: none;" title="Criteo GUM iframe" width="0" height="0" frameborder="0"></iframe><iframe src="https://gum.criteo.com/syncframe?origin=publishertag&amp;topUrl=arkmonster.r.ribbon.to#{&quot;uid&quot;:{&quot;origin&quot;:0},&quot;lwid&quot;:{&quot;origin&quot;:0},&quot;bundle&quot;:{&quot;value&quot;:&quot;XJbCZl9LR1NHTDhDNjYwQkozUTZXZVo5OFV6UVNxOFB5OEtkZEtHaDc2VzdnYjdRdUs5blN0VU9kNXhUZyUyQnBXMzJaWm9QVHNhOGVjR21LVkdKNGNYSXVnVjZKczAlMkJybkJoMmZyWmg1SVlrQ1o0U0JkTXhrWDdNQUNEc3l6dFNDNXlCTnlXZ1olMkZEajNoMk5yTGNxbFZOQW04WFElM0QlM0Q&quot;,&quot;origin&quot;:3},&quot;optout&quot;:{&quot;value&quot;:false,&quot;origin&quot;:0},&quot;sid&quot;:{&quot;origin&quot;:0},&quot;tld&quot;:&quot;ribbon.to&quot;,&quot;topUrl&quot;:&quot;arkmonster.r.ribbon.to&quot;,&quot;version&quot;:128,&quot;cw&quot;:true,&quot;lsw&quot;:true,&quot;origin&quot;:&quot;publishertag&quot;,&quot;requestId&quot;:&quot;0.3712271095391726&quot;}" style="border-width: 0px; margin: 0px; display: none;" title="Criteo GUM iframe" width="0" height="0" frameborder="0"></iframe><iframe src="https://gum.criteo.com/syncframe?origin=publishertag&amp;topUrl=arkmonster.r.ribbon.to#{&quot;uid&quot;:{&quot;origin&quot;:0},&quot;lwid&quot;:{&quot;origin&quot;:0},&quot;bundle&quot;:{&quot;value&quot;:&quot;XJbCZl9LR1NHTDhDNjYwQkozUTZXZVo5OFV6UVNxOFB5OEtkZEtHaDc2VzdnYjdRdUs5blN0VU9kNXhUZyUyQnBXMzJaWm9QVHNhOGVjR21LVkdKNGNYSXVnVjZKczAlMkJybkJoMmZyWmg1SVlrQ1o0U0JkTXhrWDdNQUNEc3l6dFNDNXlCTnlXZ1olMkZEajNoMk5yTGNxbFZOQW04WFElM0QlM0Q&quot;,&quot;origin&quot;:3},&quot;optout&quot;:{&quot;value&quot;:false,&quot;origin&quot;:0},&quot;sid&quot;:{&quot;origin&quot;:0},&quot;tld&quot;:&quot;ribbon.to&quot;,&quot;topUrl&quot;:&quot;arkmonster.r.ribbon.to&quot;,&quot;version&quot;:128,&quot;cw&quot;:true,&quot;lsw&quot;:true,&quot;origin&quot;:&quot;publishertag&quot;,&quot;requestId&quot;:&quot;0.8722749796151842&quot;}" style="border-width: 0px; margin: 0px; display: none;" title="Criteo GUM iframe" width="0" height="0" frameborder="0"></iframe></body>
